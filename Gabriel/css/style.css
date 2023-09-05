@@ -19,18 +19,14 @@ h3 {
     font-size: 20px;
 }
 
-
 .title  {
-    -webkit-box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.75);
+
     text-align: center;
     color: var(--black);
     font-family: var(--primaryfont);
     font-weight: 700;
-    margin: 0;
-    padding: 20px;
 }
+
 .title span {
     font-size: 20px;
 } 
@@ -41,30 +37,31 @@ h3 {
     box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.75);
     background-color: var(--white);
     padding: 20px;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 .nav-bg {
-    -webkit-box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.75);
     background-color: var(--primary);
-    margin-bottom: 20px;
-    border: 5px;
 }
 
 .primary-nav {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    margin: 0 auto;
 }
 
 .primary-nav a {
+    display: block;
     color: var(--white);
     padding: 10px;
+    margin: 0 auto;
+    width: 100%;
     text-decoration: none;
     text-align: center;
     font-size: 18px;
     font-weight: bold;
-}
+}   
 
 .primary-nav a:hover {
     background-color: var(--secondary);
@@ -72,19 +69,14 @@ h3 {
 }
 
 .hero {
-    -webkit-box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.75);
-    background-repeat: no-repeat;
+    height: 500px;
     background-size: cover;
-    height: 450px;
-    position: relative;
+    background-repeat: no-repeat;
     margin-bottom: 20px;
 }
 
 .contenido-hero {
-    position: absolute;
-    background: rgba(22,133,16,1);
+    background: rgb(24, 91, 27);
     width: 100%;
     height: 100%;
     display: flex;
@@ -95,7 +87,7 @@ h3 {
 
 
 .contenido-hero img{
-    justify-content: center; /* Centrar horizontalmente */
+    justify-content: center; 
     align-items: center;
 }
 
@@ -107,28 +99,40 @@ h3 {
 }
 
 .pasatiempos {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: column;
 }
+
 .pasatiempo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    margin: 10px;
-    border: 5px solid;
+    border: 4px solid;
     background-color: var(--secondary);
 }
 
 .pasatiempo img {
     margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lectura {
+    width: 300px;
+    height: 180px;
+}
+
+.gym{
+    width: 300px;
+    height: 180px;
+
 }
 
 .content h2{
     background-color: var(--secondary);
     height: 100px;
     display: flex;
-    justify-content: center; /* Centrar horizontalmente */
+    justify-content: center; 
     align-items: center;
 }
 
@@ -151,4 +155,27 @@ h3 {
     background-color: var(--secondary);
     text-align: center;
     margin-top: 10px;
+}
+
+@media only screen and (min-width: 600px) {
+
+    .content {
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+    .primary-nav {
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+    }
+
+    .pasatiempos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .pasatiempo img {
+        margin-bottom: 10px;
+    }
 }
